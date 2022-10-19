@@ -1,17 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <NavBar :loadComponents="loadComponents" />
+    <KeepAlive>
+      <component :is="currentComponent" />
+    </KeepAlive>
   </div>
 </template>
 
 <script>
+import LearningScriptPartVue from './components/LearningScriptPart.vue';
+import VueAnatomy from './components/VueAnatomy.vue';
+import NavBar from './components/NavBar.vue';
 import HelloWorld from './components/HelloWorld.vue'
+import LearningScriptPart from './components/LearningScriptPart.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    VueAnatomy,
+    LearningScriptPartVue,
+    NavBar,
+    HelloWorld,
+    LearningScriptPart
+  },
+  data() {
+    return {
+      currentComponent: "HelloWorld"
+    }
+  },
+  methods: {
+    loadComponents(componentName) {
+      this.currentComponent = componentName;
+      console.log(this.currentComponent);
+    }
   }
 }
 </script>
@@ -23,6 +44,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
