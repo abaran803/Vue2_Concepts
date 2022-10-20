@@ -13,6 +13,13 @@ import VueAnatomy from './components/VueAnatomy.vue';
 import NavBar from './components/NavBar.vue';
 import HelloWorld from './components/HelloWorld.vue'
 import LearningScriptPart from './components/LearningScriptPart.vue';
+import ParentToChildData from './components/ParentToChildData.vue';
+import ChildToParentDataUsingFunc from './components/ChildToParentDataUsingFunc.vue';
+import LearningSlot from './components/LearningSlot.vue';
+import ChildToParentDataUsingEmit from './components/ChildToParentDataUsingEmit.vue';
+import LearningMixins from './components/LearningMixins.vue';
+import LearningAxios from './components/LearningAxios.vue';
+import MovieLoader from './components/UsingAxios/MovieLoader.vue';
 
 export default {
   name: 'App',
@@ -21,8 +28,15 @@ export default {
     LearningScriptPartVue,
     NavBar,
     HelloWorld,
-    LearningScriptPart
-  },
+    LearningScriptPart,
+    ParentToChildData,
+    ChildToParentDataUsingFunc,
+    LearningSlot,
+    ChildToParentDataUsingEmit,
+    LearningMixins,
+    LearningAxios,
+    MovieLoader
+},
   data() {
     return {
       currentComponent: "HelloWorld"
